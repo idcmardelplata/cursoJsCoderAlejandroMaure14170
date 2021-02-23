@@ -9,7 +9,9 @@
 <body>
     <script>
         let nombre = prompt("Ingrese su nombre");
-        let edad = prompt("Ingresa tu edad");
+        let edadTexto = prompt("Ingresa tu edad");
+        let edadParse = Number(edadTexto);
+        let edad = parseInt(edadTexto);
         let dias = edad * 365;
 
         alert(nombre + " tenes aproximadamente " + dias + " dias de vida!");
