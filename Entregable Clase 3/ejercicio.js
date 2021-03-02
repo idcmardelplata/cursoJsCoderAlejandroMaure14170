@@ -2,6 +2,10 @@ let nombre = prompt("Ingrese su nombre");
 let dia = parseInt(prompt("Ingrese su dia de nacimiento: ejemplo. 1, 2, 3, etc"));
 let mes = prompt("Ingrese su mes de nacimiento: ejemplo. enero, febrero, etc");
 
+while (mes <= 12) {
+    alert("mes ingresado incorrectamente, pulse F5 para recargar")
+    break;
+}
 
 switch (mes) {
     case "enero":
