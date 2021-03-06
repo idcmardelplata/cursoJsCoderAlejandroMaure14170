@@ -90,5 +90,7 @@ switch (mes) {
             alert("Hola " + nombre + " tu signo es " + "CAPRICORNIO")
         }
         break;
+    default:
+        break;
 }
 
