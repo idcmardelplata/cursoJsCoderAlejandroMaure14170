@@ -1,0 +1,35 @@
+//reset
+*{
+    margin: 0px;
+    padding: 0px;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+
+  }
+
+html{
+    font-size: 62.5%;
+}
+// variables
+
+$white: #F4F4F4;
+$lightGrey: #DCDDDD;
+
+//setup
+//break points
+
+$bp: (
+    mobile: 480px,
+    tablet: 768px,
+    desktop: 1440px,
+);
+
+//globales
+//se define todas las clases box-
+
+[class ^= "box-"]{
+    display: grid;
+    text-align: center;
+    margin: 1rem;
+}

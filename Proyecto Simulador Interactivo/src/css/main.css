@@ -1,0 +1,108 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  text-decoration: none;
+  list-style: none;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+[class^="box-"] {
+  display: grid;
+  text-align: center;
+  margin: 1rem; }
+
+.grid-container {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  justify-content: space-evenly;
+  background-color: #F4F4F4;
+  grid-template-areas: "a a a a    a a a a     c c c c" "a a a a    a a a a     c c c c" "b b b b    b b b b     c c c c" "b b b b    b b b b     c c c c"; }
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-areas: "a a a a    a a a a     a a a a" "a a a a    a a a a     a a a a"  "c c c c    c c c c     c c c c" "c c c c    c c c c     c c c c"  "b b b b    b b b b     b b b b" "b b b b    b b b b     b b b b";
+    margin: 1rem; } }
+
+nav {
+  height: 6rem;
+  width: 100vw;
+  background: #42A1F3;
+  box-shadow: none !important; }
+  nav ul {
+    float: right;
+    margin-right: 2rem; }
+  nav li {
+    display: inline-block;
+    line-height: 6rem;
+    margin-right: 0 0.5rem; }
+  nav a {
+    color: #F4F4F4;
+    font-size: 1.5rem;
+    padding: 0 0.5rem;
+    text-transform: uppercase; }
+  @media (max-width: 952px) {
+    nav a {
+      font-size: 1.2rem; } }
+  @media (max-width: 858px) {
+    nav ul {
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #42A1F3;
+      top: 8rem;
+      left: -100%;
+      text-align: center;
+      transition: all .5s; }
+    nav li {
+      display: block;
+      margin: 5rem 0;
+      line-height: 3rem; }
+    nav a {
+      font-size: 2rem; }
+      nav a :hover {
+        background: none;
+        color: black; } }
+
+.box-data {
+  grid-area: a;
+  padding: 1rem 15rem 1rem 15rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5); }
+
+.box-form {
+  grid-area: b;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5);
+  align-items: center;
+  text-align: center; }
+
+.box-save {
+  grid-area: c;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem 0.3rem rgba(0, 0, 0, 0.5); }
+
+footer {
+  grid-area: e;
+  padding: 1rem;
+  background: transparent;
+  box-shadow: none; }
+
+.cards {
+  display: inline;
+  border: 1px solid black; }
+
+.form-group {
+  padding: 1rem; }
+
+form {
+  font-size: 1.3rem;
+  margin: 1rem; }
+  form input {
+    padding: 1rem; }
+  form select {
+    margin: 1rem; }

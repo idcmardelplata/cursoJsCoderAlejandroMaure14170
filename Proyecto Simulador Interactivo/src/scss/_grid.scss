@@ -1,0 +1,118 @@
+.grid-container{
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    justify-content: space-evenly;
+    background-color: $white;
+    
+
+    //columnas y filas
+    grid-template-areas:
+    
+    "a a a a    a a a a     c c c c"
+    "a a a a    a a a a     c c c c"
+    "b b b b    b b b b     c c c c"
+    "b b b b    b b b b     c c c c";
+
+}
+
+@include query(mobile){
+    .grid-container{
+        grid-template-areas:
+        "a a a a    a a a a     a a a a"
+        "a a a a    a a a a     a a a a"
+        
+        "c c c c    c c c c     c c c c"
+        "c c c c    c c c c     c c c c"
+        
+        "b b b b    b b b b     b b b b"
+        "b b b b    b b b b     b b b b";
+        margin: 1rem;
+    }
+}
+
+nav{
+    height: 6rem;
+    width: 100vw;
+    background: #42A1F3;
+    box-shadow: none !important;
+    ul{
+        float: right;
+        margin-right: 2rem;
+    }
+    li{
+        display: inline-block;
+        line-height: 6rem;
+        margin-right: 0 0.5rem;
+    }
+    a{
+        color: $white;
+        font-size: 1.5rem;
+        padding: 0 0.5rem;
+        text-transform: uppercase;
+    }
+    @media (max-width: 952px){
+        a{
+            font-size: 1.2rem;
+        }
+    }
+    @media (max-width: 858px){
+        ul{
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: #42A1F3;
+            top: 8rem;
+            left: -100%;
+            text-align: center;
+            transition: all .5s;  
+        }
+        li{
+            display: block;
+            margin: 5rem 0;
+            line-height: 3rem;
+        }
+        a{
+            font-size: 2rem;
+            :hover{
+                background: none;
+                color: black;
+            }
+        }
+    }
+}
+
+.box-data{
+    grid-area: a;
+    padding: 1rem 15rem 1rem 15rem;
+    @include border;
+
+}
+
+.box-form{
+    grid-area: b;
+    padding: 1rem;
+    @include border;
+    align-items: center;
+    text-align: center;
+}
+
+.box-save{
+    grid-area: c;
+    padding: 1rem;
+    @include border;
+
+}
+
+footer{
+    grid-area: e;
+    padding: 1rem;
+    background: transparent;
+    box-shadow: none;
+}
+
+.cards{
+    display: inline;
+    border: 1px solid black;
+
+}
