@@ -1,9 +1,54 @@
-//mascotas que se muestran se guardaran en el localstorage
-let mascota1;
+//variables
+
+//De los datos ingresados
+let datosNombre = document.getElementById("datosNombre").value;
+let datosTipo = document.getElementById("datosTipo").value;
+let datosEdad = document.getElementById("datosEdad").value;
+let datosTamano = document.getElementById("datosTamano").value;
+let datosPeso = document.getElementById("datosPeso").value;
+let datosMarca = document.getElementById("datosMarca").value;
+
+//ingresar
+let mascotaIngresada = '';
 
 
 
 
+//funciones
+    function agregarMascota() {
+        let nombreCreado = document.createElement("p");
+        nombreCreado.appendChild(datosNombre);
+
+        let tipoCreado = document.createElement("p");
+        tipoCreado.appendChild(datosTipo);
+
+        let edadCreado = document.createElement("p");
+        edadCreado.appendChild(datosEdad);
+
+        let tamanoCreado = document.createElement("p");
+        tamanoCreado.appendChild(datosTamano);
+
+        let pesoCreado = document.createElement("p");
+        pesoCreado.appendChild(datosPeso);
+
+        let marcaCreado = document.createElement("p");
+        marcaCreado.appendChild(datosMarca)
+    }
+    console.log(agregarMascota);
+
+
+
+
+//local storage
+/*let stgNombre = localStorage.setItem('nombre', datosNombre);
+let stgTipo = localStorage.setItem('tipo', datosTipo);
+let stgEdad = localStorage.setItem('edad', datosEdad);
+let stgTamano = localStorage.setItem('tamano', datosTamano);
+let stgPeso = localStorage.setItem('peso', datosPeso);
+let stgMarca = localStorage.setItem('marca', datosMarca);
+*/
+
+//clases
 class Mascota{
     constructor(nombre, tipo, edad, tamano, peso, marca) {
         this.nombre = nombre;
@@ -17,13 +62,9 @@ class Mascota{
         return this.peso*10*3;
     }
 }
-    
-    let nombre = prompt("Como se llama tu mascota?");
-    let tipo = prompt(nombre + " es perro o gato?");
-    let edad = prompt(nombre + " es cachorro o adulto?");
-    let tamano = prompt(nombre + " es chico, mediano o grande?");
-    let peso = parseInt(prompt(nombre + "Cuanto pesa (kg)? Ej 1, 2, 3, etc"));
-    let marca = prompt("Que marca de alimento balanceado le estas dando?");
+
+
+
         
 mascota1 = new Mascota(nombre, tipo, edad, tamano, peso, marca);
 
@@ -31,6 +72,3 @@ mascota1 = new Mascota(nombre, tipo, edad, tamano, peso, marca);
 const mascotas = [];
 mascotas.push(new Mascota(nombre, tipo, edad, tamano, peso, marca));
 
-
-alert("Datos de mascota: " + "Nombre: " + mascota1.nombre+ ". " + "Tipo: " + mascota1.tipo + ". " + "Edad: " + mascota1.edad + ". " + "Tamano: " + mascota1.tamano + ". " + "Peso: " + mascota1.peso + " (Kg)" +". " + "Marca de Balanceado: " + mascota1.marca + ". " + "Cantidad de Balanceado: " + mascota1.cantidadDeComida() + "Grs. Dividido 3 Veces por Dia.");
-console.log(mascotas.sort());

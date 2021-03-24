@@ -7,146 +7,172 @@
     <link rel="stylesheet" href="src/css/main.css">
     <title>Document</title>
 </head>
-<body>
-    <header>
-        <nav>
-            <div>
-                <ul>
-                    <li><a href="">acerca de</a></li>
-                    <li><a href="">contacto</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main class="grid-container">
-        <section class="box-data">
-            <h2>Resultado de la busqueda</h2>
-            <p>Nombre: </p>
-            <p>Edad: </p>
-            <p>Peso: </p>
-            <p>Marca: </p>
-            <h3>Cantidad recomendada por dia: </h3>
-            <input type="button" value="GUARDAR"> <button><a href="">Donde comprar</a></button>
-        </section>
+<body class="app-container">
+    <!--header-->
+    <header class="app-header">
+        <div class="app-header-left">
+            <img src="src/svg/logo.svg" alt="logo" class="icon-logo">
+            <p class="app-name">Que le Doy?</p>
+        </div>
 
-        <section class="box-save">
-            <div class="cards">
-                <h2>Mascota Guardada</h2>
-                <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Peso: </p>
-                <p>Marca: </p>
-                <h3>Cantidad recomendada por dia: </h3>
+        <div class="app-header-center">
+            <div class="search-wrapper">
+                <input type="text" id="" placeholder="Buscar Marca" class="search-input">
+                <img src="src/svg/search.svg" alt="search icon" class="icon-search">
             </div>
-            <div class="cards">
-                <h2>Mascota Guardada</h2>
-                <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Peso: </p>
-                <p>Marca: </p>
-                <h3>Cantidad recomendada por dia: </h3>
-            </div>
-            <div class="cards">
-                <h2>Mascota Guardada</h2>
-                <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Peso: </p>
-                <p>Marca: </p>
-                <h3>Cantidad recomendada por dia: </h3>
-            </div>
-            <div class="cards">
-                <h2>Mascota Guardada</h2>
-                <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Peso: </p>
-                <p>Marca: </p>
-                <h3>Cantidad recomendada por dia: </h3>
-            </div>
-            <div class="cards">
-                <h2>Mascota Guardada</h2>
-                <p>Nombre: </p>
-                <p>Edad: </p>
-                <p>Peso: </p>
-                <p>Marca: </p>
-                <h3>Cantidad recomendada por dia: </h3>
-            </div>
-        </section>
+        </div>
         
-        <section class="box-form form-group">
-            <div>
-                <div>
-                    <h2>completa los datos</h2>
+        <div class="app-header-right">
+            <button class="switch-btn">
+                <img src="src/svg/night-mode.svg" alt="night mode" class="icon-switch" id="nightIcon">
+            </button>
+            <button class="contact-btn">
+                <img src="src/svg/contact.svg" alt="contacto" class="icon-contact">
+            </button>
+        </div>
+    </header>
+    <!--seccion principal con el contenido-->
+    <main class="app-content">
+        <!--seccion resultado de la busqueda-->
+        <div class="result-section">
+            <div class="data-section-header">
+                <p>Resultado de la busqueda</p>
+            </div>
+        </div>
+        <!--seccion de ingreso de datos-->
+        <div class="data-section">
+            <div class="data-section-header">
+                <p>Ingresado los Datos de tu Mascota</p>
+            </div>
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Nombre</p>
+                        </div>
+                        <form id="datosNombre" class="box-form">
+                            <input type="text" name="nombre" class="input-info">
+                        </form>
+                    </div>
                 </div>
-                <div>
-                    <form action="">
-                        <div>
-                            <label for="">Tipo de mascota</label>
+            </div>
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Tipo</p>
+                        </div>
+                        <form id="datosTipo" class="box-form">
                             <input type="radio">Perro
                             <input type="radio">Gato
-                        </div>
-                        <div>
-                            <label for="">Edad</label>
-                            <select name="" id="">
-                                <option value="seleccionar">seleccionar</option>
-                                <option value="cachorro">cachorro</option>
-                                <option value="adulto">adulto</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="">Tamano</label>
-                            <select name="" id="">
-                                <option value="seleccionar">seleccionar</option>
-                                <option value="chico">chico</option>
-                                <option value="mediano">mediano</option>
-                                <option value="grande">grande</option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="">Peso</label>
-                            <select name="" id="">
-                                <option value=""></option>
-                            </select>
-                        </div>
-                        <div>
-                            <label for="">Marca de Alimento Balanceado</label>
-                            <select name="" id="">
-                                <option value="seleccionar">seleccionar</option>
-                                <option value="seleccionar">Pro Plan</option>
-                                <option value="seleccionar">Eukanuba</option>
-                                <option value="seleccionar">Vital Can</option>
-                                <option value="seleccionar">Royal Canin</option>
-                                <option value="seleccionar">Excellent</option>
-                                <option value="seleccionar">Dog Chow</option>
-                                <option value="seleccionar">Dogui</option>
-                                <option value="seleccionar">Gati</option>
-                                <option value="seleccionar">Raza</option>
-                                <option value="seleccionar">Sabrositos</option>
-                                <option value="seleccionar">Pedigree</option>
-                                <option value="seleccionar">Sieger</option>
-                                <option value="seleccionar">Kongo</option>
-                                <option value="seleccionar">Whiskas</option>
-                                <option value="seleccionar">seleccionar</option>
-                                <option value="seleccionar">Otros</option>
-
-                            </select>
-                        </div>
-                        <div>
-                            <input type="submit" value="Consultar">
-                        </div>
-                    </form>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </section>
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Edad</p>
+                        </div>
+                        <form id="datosEdad" class="box-form">
+                                <input type="radio">Cachorro
+                                <input type="radio">Adulto
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Tamano</p>
+                        </div>
+                        <form id="datosTamano" class="box-form">
+                            <input type="radio">Chico
+                            <input type="radio">Mediano
+                            <input type="radio">Grande
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Peso</p>
+                        </div>
+                        <form id="datosPeso" class="box-form">
+                            <input type="numbre" name="kilo" class="input-info"> Kg
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <div class="data-box-content-header">
+                            <p class="box-content-header">Marca de Balanceado</p>
+                        </div>
+                        <form id="datosMarca" class="box-form">
+                            <select>
+                                <option value="seleccionar">seleccionar</option>
+                                <option value="proplan">Pro Plan</option>
+                                <option value="eukanuba">Eukanuba</option>
+                                <option value="vitalcan">Vital Can</option>
+                                <option value="royalcanin">Royal Canin</option>
+                                <option value="excellent">Excellent</option>
+                                <option value="dogchow">Dog Chow</option>
+                                <option value="dogui">Dogui</option>
+                                <option value="gati">Gati</option>
+                                <option value="raza">Raza</option>
+                                <option value="sabrositos">Sabrositos</option>
+                                <option value="pedigree">Pedigree</option>
+                                <option value="sieger">Sieger</option>
+                                <option value="kongo">Kongo</option>
+                                <option value="whiskas">Whiskas</option>
+                                <option value="seleccionar">Otros</option>
+                            </select>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="data-boxes">
+                <div class="data-box-wrapper">
+                    <div class="data-box" style="background-color: #e9e7fd;">
+                        <form id="guardado" class="box-form">
+                            <input type="button" name="guardar" id="guardar" class="input-button" value="GUARDAR">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--seccion de mascotas guardadas-->
+        <div class="pet-section">
+            <div class="pet-section-header">
+                <p>Mascotas Guardadas</p>
+            </div>
+                <div class="pet-box">
+                    <div class="pet-content">
+                        <div class="pet-header">
+                            <img src="src/svg/dog.svg" alt="" class="" id="dogIcon">
+                            <p>Nombre</p>
+                        </div>
+                        <div class="pet-data">
+                            <p>Edad: </p>
+                            <p>Tamano: </p>
+                            <p>peso: </p>
+                            <p>Marca: </p>
+                            <p>Cantidad: </p>
+                        </div>
+                    </div>
+                </div>
+        </div>
     </main>
-    <footer class="box-footer">
-        <div class="copyright">
-            <p>Alejandro Maure. Todos los derechos reservados. &copy;</p>
-        </div>
-        <div class="dev">
-            <p>Creado por <a href="www.alejandromaure.com.ar" class="am">Alejandro Maure</a></p>
-        </div>
-    </footer>
-<script src="src/js/script.js"></script>
-<script src="src/js/data.js"></script>
+    <!--footer-->
+    <footer></footer>
 </body>
 </html>
+
