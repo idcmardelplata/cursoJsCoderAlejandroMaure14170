@@ -15,26 +15,21 @@ let mascotaIngresada = '';
 
 
 //funciones
-    function agregarMascota() {
-        let nombreCreado = document.createElement("p");
-        nombreCreado.appendChild(datosNombre);
-
-        let tipoCreado = document.createElement("p");
-        tipoCreado.appendChild(datosTipo);
-
-        let edadCreado = document.createElement("p");
-        edadCreado.appendChild(datosEdad);
-
-        let tamanoCreado = document.createElement("p");
-        tamanoCreado.appendChild(datosTamano);
-
-        let pesoCreado = document.createElement("p");
-        pesoCreado.appendChild(datosPeso);
-
-        let marcaCreado = document.createElement("p");
-        marcaCreado.appendChild(datosMarca)
+    function mostrarResultado() {
+        mostrar = document.getElementById("result")
+        mostrarNombre = "<p>" + datosNombre + "</p>"
+        mostrarTipo = "<p>" + datosTipo + "</p>"
+        mostrarEdad = "<p>" + datosEdad + "</p>"
+        mostrarTamano = "<p>" + datosTamano + "</p>"
+        mostrarPeso = "<p>" + datosPeso+ "</p>"
+        mostrarMarca = "<p>" + datosMarca + "</p>"
     }
-    console.log(agregarMascota);
+    window.onload = () => {document.guardado.guardar.onclick = mostrarResultado};
+    
+
+let guardar = document.getElementById("guardar");
+guardar.addEventListener("click", mostrarResultado);
+
 
 
 
