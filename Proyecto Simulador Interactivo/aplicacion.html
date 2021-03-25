@@ -50,75 +50,27 @@
             <div class="data-boxes">
                 <div class="data-box-wrapper">
                     <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Nombre</p>
-                        </div>
-                        <form id="datosNombre" class="box-form">
+                        <form action="">
+                            <p class="data-content-header">Nombre</p>
                             <input type="text" name="nombre" class="input-info">
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Tipo</p>
-                        </div>
-                        <form id="datosTipo" class="box-form">
+
+                            <p>Tipo de mascota</p>
                             <input type="radio">Perro
                             <input type="radio">Gato
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Edad</p>
-                        </div>
-                        <form id="datosEdad" class="box-form">
-                                <input type="radio">Cachorro
-                                <input type="radio">Adulto
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Tamano</p>
-                        </div>
-                        <form id="datosTamano" class="box-form">
+
+                            <p>Edad</p>
+                            <input type="radio">Perro
+                            <input type="radio">Gato
+
+                            <p>Tamaño</p>
                             <input type="radio">Chico
                             <input type="radio">Mediano
                             <input type="radio">Grande
-                        </form>
-                    </div>
-                </div>
-            </div>
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Peso</p>
-                        </div>
-                        <form id="datosPeso" class="box-form">
-                            <input type="numbre" name="kilo" class="input-info"> Kg
-                        </form>
-                    </div>
-                </div>
-            </div>
 
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <div class="data-box-content-header">
-                            <p class="box-content-header">Marca de Balanceado</p>
-                        </div>
-                        <form id="datosMarca" class="box-form">
+                            <p>Peso</p>
+                            <input type="numbre" name="kilo" class="input-info"> Kg.
+
+                            <p>Marca de Balanceado</p>
                             <select>
                                 <option value="seleccionar">seleccionar</option>
                                 <option value="proplan">Pro Plan</option>
@@ -137,21 +89,14 @@
                                 <option value="whiskas">Whiskas</option>
                                 <option value="seleccionar">Otros</option>
                             </select>
+
+                            <button id="guardar" class="input-button">Guardar</button>
+                            
                         </form>
                     </div>
                 </div>
             </div>
 
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <form id="guardado" class="box-form">
-                            <button id="guardar" class="input-button">Guardar</button>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
         <!--seccion de mascotas guardadas-->
         <div class="pet-section">
             <div class="pet-section-header">
