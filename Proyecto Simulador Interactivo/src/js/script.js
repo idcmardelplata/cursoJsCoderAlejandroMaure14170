@@ -1,12 +1,4 @@
-//variables
 
-//De los datos ingresados
-let datosNombre = document.getElementById("datosNombre").value;
-let datosTipo = document.getElementById("datosTipo").value;
-let datosEdad = document.getElementById("datosEdad").value;
-let datosTamano = document.getElementById("datosTamano").value;
-let datosPeso = document.getElementById("datosPeso").value;
-let datosMarca = document.getElementById("datosMarca").value;
 
 //ingresar
 let mascotaIngresada = '';
@@ -15,22 +7,63 @@ let mascotaIngresada = '';
 
 
 //funciones
-    function mostrarResultado() {
-        mostrar = document.getElementById("result")
-        mostrarNombre = "<p>" + datosNombre + "</p>"
-        mostrarTipo = "<p>" + datosTipo + "</p>"
-        mostrarEdad = "<p>" + datosEdad + "</p>"
-        mostrarTamano = "<p>" + datosTamano + "</p>"
-        mostrarPeso = "<p>" + datosPeso+ "</p>"
-        mostrarMarca = "<p>" + datosMarca + "</p>"
-    }
-    window.onload = () => {document.guardado.guardar.onclick = mostrarResultado};
+
     
 
-let guardar = document.getElementById("guardar");
-guardar.addEventListener("click", mostrarResultado);
+    let datosNombre = document.getElementById("datosNombre").value;
+    let datosPeso = document.getElementById("datosPeso").value;
+    let datosMarca = document.getElementById("datosMarca").value;
+
+    let guardarBtn = document.getElementById("guardar");
+
+    let datosTipo = "";
+
+    let tipoPerro = document.getElementById("perro");
+    let tipoGato = document.getElementById("gato");
+    if (tipoPerro.checked){
+        datosTipo = tipoPerro.value;
+    }else{
+        datosTipo = tipoGato.value;
+    }
 
 
+    let datosEdad = "";
+
+    let edadCachorro = document.getElementById("cachorro");
+    let edadAdulto = document.getElementById("adulto");
+
+    if (edadCachorro.checked){
+        datosEdad = edadCachorro.value;
+    }else{
+        datosEdad = edadAdulto.value;
+    }
+
+
+    let datosTamano = "";
+
+    let tamanoChico = document.getElementById("chico");
+    let tamanoMediano = document.getElementById("mediano");
+    let tamanoGrande = docuemnt.getElementById("grande");
+
+    if (tamanoChico.checked){
+        datosTamano = tamanoChico.value;
+    }else if (tamanoMediano.checked){
+        datosTamano = tamanoMediano.value;
+    }else{
+        datosTamano = tamanoGrande.value;
+    }
+
+    guardarBtn.addEventListener("click", mostrarResultado);
+    document.getElementById("guardar").addEventListener("click", (event) => {event.preventDefault()});
+
+    let mostrarResultado = `<p>Nombre: ${datosNombre}</p><br> <p>Tipo: ${datosTipo}</p><br> <p>Edad: ${datosEdad}</p><br> <p>Tamano: ${datosTamano}</p><br> <p>Peso: ${datosPeso}Kg.</p><br>`
+    
+
+let datosResultado = document.createElement("div");
+
+datosResultado.innerHTML = mostrarResultado;
+
+document.getElementById("petData").appendChild(datosResultado);
 
 
 
