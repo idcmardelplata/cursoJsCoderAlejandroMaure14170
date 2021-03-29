@@ -37,7 +37,7 @@
         <div class="result-section">
             <div class="data-section-header">
                 <p>Resultado de la busqueda</p>
-            <div id="result">
+            <div id="resultado">
 
             </div>
             </div>
@@ -50,28 +50,27 @@
             <div class="data-boxes">
                 <div class="data-box-wrapper">
                     <div class="data-box" style="background-color: #e9e7fd;">
-                        <form action="" id="form-group">
+                        <form action="" class="form-group" method="POST" id="form-group">
                             <p class="data-content-header">Nombre</p>
                             <input type="text" name="nombre" class="input-info" id="nombre">
 
                             <p>Tipo de mascota</p>
-                            <input type="radio" id="perro">Perro
-                            <input type="radio" id="gato">Gato
-
+                            <input type="radio" name="tipo" value="perro">Perro
+                            <input type="radio" name="tipo" value="gato">gato
                             <p>Edad</p>
-                            <input type="radio" id="cachorro">Cachorro
-                            <input type="radio" id="adulto">Adulto
+                            <input type="radio" name="edad" value="cachorro">Cachorro
+                            <input type="radio" name="edad" value="adulto">Adulto
 
                             <p>Tamaño</p>
-                            <input type="radio" id="chico">Chico
-                            <input type="radio" id="mediano">Mediano
-                            <input type="radio" id="grande">Grande
+                            <input type="radio" name="tamanio" value="chico">Chico
+                            <input type="radio" name="tamanio" value="mediano">Mediano
+                            <input type="radio" name="tamanio" value="grande">Grande
 
                             <p>Peso</p>
-                            <input type="numbre" name="kilo" class="input-info" id="kg"> Kg.
+                            <input type="number" name="peso" class="input-info" id="kg"> Kg.
 
                             <p>Marca de Balanceado</p>
-                            <select>
+                            <select name="marca">
                                 <option value="seleccionar">seleccionar</option>
                                 <option value="proplan">Pro Plan</option>
                                 <option value="eukanuba">Eukanuba</option>
@@ -90,7 +89,7 @@
                                 <option value="seleccionar">Otros</option>
                             </select>
 
-                            <button id="guardar" class="input-button" id="guardar">Guardar</button>
+                            <button type="submit"  class="input-button">Consultar</button>
                             
                         </form>
                     </div>
@@ -116,6 +115,7 @@
     </main>
     <!--footer-->
     <footer></footer>
+    <script src="./src/js/script.js"></script>
 </body>
 </html>
 
