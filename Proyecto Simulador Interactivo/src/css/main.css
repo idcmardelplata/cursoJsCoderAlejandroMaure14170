@@ -11,7 +11,6 @@ html {
 
 body {
   font-family: 'DM Sans', sans-serif;
-  overflow: hidden;
   display: flex;
   justify-content: center;
   background-color: #f3f6fd; }

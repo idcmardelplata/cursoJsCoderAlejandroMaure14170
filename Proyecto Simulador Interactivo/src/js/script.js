@@ -8,6 +8,8 @@ const tamanio = formulario.tamanio;
 const peso = formulario.peso;
 const marca = formulario.marca;
 const datosResultado = document.getElementById("resultado");
+const datosGuardado = document.getElementById("petData");
+
 
 
 //clases
@@ -26,6 +28,11 @@ class Mascota{
     }
 }
 
+//funciones
+//calculo cantidad de comida
+
+
+//respuesta a la consulta
 formulario.addEventListener('submit', (e =>{
     e.preventDefault();
     const mascotaAMostrar = new Mascota(nombre.value, tipo.value, edad.value, tamanio.value, peso.value, marca.value);
@@ -38,12 +45,45 @@ let mostrarResultado = `
 <p>Peso: ${mascotaAMostrar.peso}Kg.</p><br>
 <p>Marca de Alimento: ${mascotaAMostrar.marca}</p><br>
 <p>Cantidad de Alimento: ${mascotaAMostrar.cantidadDeComida()} gr.</p><br>
-<button type="submit"  class="save-btn" id="save"> Guardar Mascota </button>
-<button type="submit"  class="input-button" id="clear">Limpiar Busqueda</button>
+<button class="save-btn" id="agregar"> Guardar Mascota </button>
+<button class="input-button" id="clear">Limpiar Busqueda</button>
 `;
 
 datosResultado.innerHTML = mostrarResultado;
 
 formulario.reset();
 
+document.getElementById('agregar').addEventListener('click', () =>{agregar()
+
+function agregar(){
+    const agregarMascota = localStorage.setItem(mascotaAMostrar.nombre, JSON.stringify(mascotaAMostrar));
+    
+    let mostrarMascota = JSON.parse(localStorage.getItem(mascotaAMostrar.nombre));
+
+    let mostrarMascotaGuardada = `
+<p>Nombre: ${mostrarMascota.nombre}</p><br> 
+<p>Tipo: ${mostrarMascota.tipo}</p><br> 
+<p>Edad: ${mostrarMascota.edad}</p><br> 
+<p>Tamano: ${mostrarMascota.tamanio}</p><br> 
+<p>Peso: ${mostrarMascota.peso}Kg.</p><br>
+<p>Marca de Alimento: ${mostrarMascota.marca}</p><br>
+`;
+    
+    
+    
+    datosGuardado.innerHTML = mostrarMascotaGuardada;
+    
+}});
+
+document.getElementById('clear').addEventListener('click', () =>{limpiar()
+    
+    function limpiar(){
+        datosResultado.innerHTML = "";
+    }
+    
+})
+
+
+
 }))
+
