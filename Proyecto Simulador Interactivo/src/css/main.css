@@ -9,22 +9,13 @@
 html {
   font-size: 62.5%; }
 
-body {
-  font-family: 'DM Sans', sans-serif;
-  display: flex;
-  justify-content: center;
-  background-color: #f3f6fd; }
-
 button, a {
   cursor: pointer; }
 
 .app-container {
-  width: 100%;
-  height: 100%;
   display: flex;
   flex-direction: column;
-  background-color: #f3f6fd;
-  max-width: 1800px; }
+  background-color: #f3f6fd; }
 
 .app-header {
   width: 100%;
@@ -54,12 +45,6 @@ button, a {
   font-weight: 700;
   line-height: 2.5rem;
   margin: 1.2rem 8rem; }
-
-.app-content {
-  display: flex;
-  height: 100%;
-  overflow: hidden;
-  padding: 1.6rem 2.4rem 2.4rem 0; }
 
 .icon-logo {
   width: 5rem;
@@ -119,138 +104,29 @@ button, a {
   justify-content: center;
   align-items: center; }
 
-.data-section {
-  position: relative;
-  background-color: #fff;
-  border-radius: 3rem;
-  padding: 3rem 3rem 0 3rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap; }
-  .data-section-header {
-    width: 100%;
-    text-align: center;
-    margin: 0 auto;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-    color: #1f1c2e; }
-    .data-section-header p {
-      font-size: 2.5rem;
-      line-height: 3rem;
-      font-weight: 700;
-      opacity: 0.9;
-      margin: 0;
-      color: #1f1c2e; }
-
-.pet-section {
-  display: flex;
-  position: relative;
-  justify-content: center;
-  background-color: #fff;
-  padding: 3rem;
-  margin: 5rem;
-  border-radius: 2rem;
-  transition: all 300ms cubic-bezier(0.19, 1, 0.56, 1);
-  flex-wrap: wrap; }
-  .pet-section .pet-close {
-    position: absolute;
-    top: 12px;
-    right: 12px;
-    z-index: 3;
-    border: none;
-    background-color: transparent;
-    color: var(--main-color);
-    display: none; }
-  .pet-section.show {
-    transform: translateX(0);
-    opacity: 1;
-    margin-left: 0; }
-  .pet-section .data-section-header {
-    padding: 5rem; }
-  .pet-section .pet-box {
-    border-top: 0.1rem solid #e9ebf0;
-    padding: 1.5rem;
-    display: flex; }
-    .pet-section .pet-box-icon {
-      border-radius: 50%;
-      object-fit: cover;
-      width: 4rem;
-      height: 4rem; }
-
-.pet-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 100%; }
-  .pet-header .name {
-    font-size: 1.5rem;
-    line-height: 2.4rem;
-    font-weight: 700;
-    color: #1f1c2e;
-    margin: 0; }
-
-.pet-content {
-  padding-left: 1.6rem;
-  width: 100%; }
-
-.pet-data {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  opacity: 0.7; }
-
-.data-boxes {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem; }
-  .data-boxes .data-box-content-header {
-    order: 1; }
-    .data-boxes .data-box-content-header p {
-      text-align: center;
-      overflow: hidden;
-      text-overflow: ellipsis; }
-  .data-boxes .data-box-header {
-    order: 2; }
-
-.data-box {
-  border-radius: 1rem;
-  padding: 10rem;
-  background-color: #1f1c2e; }
-  .data-box-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 1.5rem;
-    color: #1f1c2e; }
-  .data-box-content-header {
-    text-align: center;
-    margin-bottom: 1.5rem; }
-    .data-box-content-header p {
-      margin: 0; }
-
-.box-content-header {
-  font-size: 16px;
-  font-weight: 700;
-  opacity: .7;
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-
-.box-header {
-  font-size: 1.5rem;
-  font-weight: 700;
-  line-height: 1.5px;
-  margin: 0; }
-
-.result-section {
-  flex-grow: 1;
-  display: flex;
-  background-color: #fff;
-  border-radius: 3rem;
-  margin: 5rem;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+.result-container {
+  width: 100%;
   height: 100%;
-  width: 100vw; }
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 2rem;
+  margin: 0 auto;
+  margin-left: 3rem;
+  margin-right: 3rem; }
+
+.data-container {
+  width: 50%;
+  height: 50vh;
+  background-color: white;
+  border-radius: 2rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3rem auto;
+  margin-left: 3rem; }
+  .data-container h3 {
+    font-size: 2rem;
+    padding: 0 0 5rem; }
