@@ -105,28 +105,47 @@ button, a {
   align-items: center; }
 
 .result-container {
-  width: 100%;
-  height: 100%;
+  height: 10%;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: white;
   border-radius: 2rem;
-  margin: 0 auto;
-  margin-left: 3rem;
-  margin-right: 3rem; }
+  margin-left: 10rem;
+  margin-right: 10rem; }
 
 .data-container {
-  width: 50%;
+  width: 45%;
   height: 50vh;
   background-color: white;
   border-radius: 2rem;
   position: relative;
+  float: left;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 3rem auto;
-  margin-left: 3rem; }
+  margin: auto;
+  margin-top: 3rem;
+  margin-left: 10rem;
+  margin-right: 0; }
   .data-container h3 {
     font-size: 2rem;
     padding: 0 0 5rem; }
+
+.pet-container {
+  width: 35vw;
+  height: 100%;
+  background-color: white;
+  border-radius: 2rem;
+  display: flex;
+  float: right;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3rem;
+  margin-right: 10rem;
+  margin-left: 0; }
+  .pet-container h3 {
+    font-size: 3rem; }
+  .pet-container button {
+    display: flex;
+    float: left; }

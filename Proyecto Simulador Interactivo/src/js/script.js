@@ -31,12 +31,7 @@ formulario.addEventListener('submit', (e =>{
     const mascotaAMostrar = new Mascota(nombre.value, tipo.value, edad.value, tamanio.value, peso.value, marca.value, cantidad);
 
 let mostrarResultado = `
-    <div class="result-container">
-        <div class="result-header">
-            <h3>Resultado de la Busqueda</h3>
-        </div>
-
-        <div class="result-info">
+        <div>
             <h3>${mascotaAMostrar.nombre}</h3> 
             <p>Tipo: ${mascotaAMostrar.tipo}</p> 
             <p>Edad: ${mascotaAMostrar.edad}</p>
@@ -47,8 +42,7 @@ let mostrarResultado = `
             <button class="save-btn" id="agregar"> Guardar Mascota </button>
             <button class="input-button" id="clear">Limpiar Busqueda</button>
         </div>
-    </div>
-`;
+            `;
 
 datosResultado.innerHTML = mostrarResultado;
 
@@ -62,8 +56,8 @@ function agregar(){
     let mostrarMascota = JSON.parse(localStorage.getItem(mascotaAMostrar.nombre));
 
     let mostrarMascotaGuardada = `
-        <h3>${mostrarMascota.nombre}</h3>
-
+    <div>
+    <h3>${mostrarMascota.nombre}</h3>
     <p>Tipo: ${mostrarMascota.tipo}</p>
     <p>Edad: ${mostrarMascota.edad}</p>
     <p>Tamano: ${mostrarMascota.tamanio}</p>
@@ -71,9 +65,17 @@ function agregar(){
     <p>Marca de Alimento: ${mostrarMascota.marca}</p>
     <p>Cantidad de Alimento; ${mostrarMascota.cantidad} gr.</p>
     <button id="eliminar"><i class="fas fa-trash-alt"></i></button>
+    </div>
 `;
   
     datosGuardado.innerHTML = mostrarMascotaGuardada;
+
+    $('#eliminar').click(() =>{eliminar()
+    
+    function eliminar() {
+        datosGuardado.innerHTML = "";
+        localStorage.removeItem(mascotaAMostrar.nombre);
+    }})
     
 }});
 
