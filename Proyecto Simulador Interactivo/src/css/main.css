@@ -119,7 +119,6 @@ button, a {
   height: 50vh;
   background-color: white;
   border-radius: 2rem;
-  position: relative;
   float: left;
   display: flex;
   justify-content: center;
@@ -131,6 +130,17 @@ button, a {
   .data-container h3 {
     font-size: 2rem;
     padding: 0 0 5rem; }
+  .data-container input {
+    border-radius: 1.5rem;
+    border: 0.1rem solid black; }
+  .data-container button {
+    border-radius: 1rem;
+    width: 8rem;
+    height: 3.3rem;
+    border: none;
+    background-color: #0484F4;
+    color: #fff;
+    box-shadow: 3px 3px 3px 1px rgba(0, 0, 0, 0.3); }
 
 .pet-container {
   width: 35vw;
@@ -149,3 +159,36 @@ button, a {
   .pet-container button {
     display: flex;
     float: left; }
+
+@media screen and (max-width: 990px) {
+  .app-header {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 auto; }
+    .app-header-left {
+      justify-content: center;
+      align-items: center;
+      margin: 1rem auto; }
+    .app-header-center {
+      margin: 1rem; }
+    .app-header-right {
+      display: flex;
+      padding: 0; }
+  .result-container {
+    width: 50%; }
+  .search-wrapper {
+    max-width: 180px; }
+  .search-input {
+    width: 1rem; }
+  ::placeholder {
+    color: transparent; }
+  .data-container {
+    width: 100%; } }
+
+.dark-mode {
+  background-color: #4b4747 !important; }
+
+.light-mode {
+  background-color: #f3f6fd !important;
+  color: black !important; }
