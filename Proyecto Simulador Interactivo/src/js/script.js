@@ -10,7 +10,7 @@ const peso = formulario.peso;
 const marca = formulario.marca;
 const datosResultado = document.getElementById("resultado");
 const datosGuardado = document.getElementById("petData");
-let agregada = 0;
+const fotos = document.getElementById("photos");
 
 
 
@@ -188,14 +188,6 @@ function agregar() {
 
 });
 
-/*
-$(document).ready(()=>{
-        if (localstorage) {
-            
-        }
-})
-*/
-
 //evento limpieza de resultado de la busqueda
 $('#clear').click(() =>{
     $('#resultado').fadeOut("slow", () =>{
@@ -208,7 +200,9 @@ $('#clear').click(() =>{
 )
 }));
 
-$(function () {
+
+//modo oscuro
+$(()=> {
     $("#nightIcon").click(() => {
         $("body").toggleClass("dark-mode")
     })
@@ -216,3 +210,21 @@ $(function () {
 
 //final ready function
 
+
+//carga de fotos random de perros
+$("#dp").click(() => {
+    $.get('https://dog.ceo/api/breeds/image/random', (res) => {
+    console.log()
+    
+    fotos.innerHTML = `<img src="${res.message}" width=100px height=100px>`
+});
+});
+
+//carga de fotos radom de gatos
+$("#cp").click(() => {
+    $.get(' https://api.thecatapi.com/v1/images/search', (res) => {
+    console.log(res)
+    
+    fotos.innerHTML = `<img src="${res[0].url}" width=100px height=100px>`
+});
+});
