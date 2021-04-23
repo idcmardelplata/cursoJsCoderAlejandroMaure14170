@@ -13,7 +13,6 @@ const datosGuardado = document.getElementById("petData");
 const fotos = document.getElementById("photos");
 
 
-
 //funciones de calculo de comida
 function cantidadTipoEdad(tipo, edad) {
     if (tipo == "gato" && edad == "cachorro") {
@@ -160,19 +159,41 @@ function agregar() {
         const agregarMascota = localStorage.setItem(mascotaAMostrar.nombre, JSON.stringify(mascotaAMostrar));
     
         let mostrarMascota = JSON.parse(localStorage.getItem(mascotaAMostrar.nombre));
+
+            $('#petData').append(`
+            <div>
+            <h3>${mostrarMascota.nombre}</h3>
+            <p>Tipo: ${mostrarMascota.tipo}</p>
+            <p>Edad: ${mostrarMascota.edad}</p>
+            <p>Tamano: ${mostrarMascota.tamanio}</p>
+            <p>Peso: ${mostrarMascota.peso}Kg.</p>
+            <p>Marca de Alimento: ${mostrarMascota.marca}</p>
+            <p>Cantidad de Alimento; ${mostrarMascota.cantidad} gr.</p>
+            <button id="eliminar"><i class="fas fa-trash-alt"></i></button>
+            </div>
+        `)
+
+        document.body.onload = mostrarEnDom;
         
-        $('#petData').append(`
-        <div>
-        <h3>${mostrarMascota.nombre}</h3>
-        <p>Tipo: ${mostrarMascota.tipo}</p>
-        <p>Edad: ${mostrarMascota.edad}</p>
-        <p>Tamano: ${mostrarMascota.tamanio}</p>
-        <p>Peso: ${mostrarMascota.peso}Kg.</p>
-        <p>Marca de Alimento: ${mostrarMascota.marca}</p>
-        <p>Cantidad de Alimento; ${mostrarMascota.cantidad} gr.</p>
-        <button id="eliminar"><i class="fas fa-trash-alt"></i></button>
-        </div>
-    `);
+        function mostrarEnDom() {
+            if (localStorage.getItem(mostrarMascota.nombre)) {
+                $('#petData').append(`
+                <div>
+                <h3>${mostrarMascota.nombre}</h3>
+                <p>Tipo: ${mostrarMascota.tipo}</p>
+                <p>Edad: ${mostrarMascota.edad}</p>
+                <p>Tamano: ${mostrarMascota.tamanio}</p>
+                <p>Peso: ${mostrarMascota.peso}Kg.</p>
+                <p>Marca de Alimento: ${mostrarMascota.marca}</p>
+                <p>Cantidad de Alimento; ${mostrarMascota.cantidad} gr.</p>
+                <button id="eliminar"><i class="fas fa-trash-alt"></i></button>
+                </div>
+            `)
+
+            }
+
+
+        }
 
     //evento eliminacion de la mascota guardada y del localstorage
     $('#eliminar').click(() =>{
@@ -201,30 +222,20 @@ $('#clear').click(() =>{
 }));
 
 
-//modo oscuro
-$(()=> {
-    $("#nightIcon").click(() => {
-        $("body").toggleClass("dark-mode")
-    })
-})
-
-//final ready function
-
-
 //carga de fotos random de perros
 $("#dp").click(() => {
     $.get('https://dog.ceo/api/breeds/image/random', (res) => {
     console.log()
     
-    fotos.innerHTML = `<img src="${res.message}" width=100px height=100px>`
+    fotos.innerHTML = `<img src="${res.message}" width=300px height=300px>`
 });
 });
 
-//carga de fotos radom de gatos
+//carga de fotos random de gatos
 $("#cp").click(() => {
     $.get(' https://api.thecatapi.com/v1/images/search', (res) => {
     console.log(res)
     
-    fotos.innerHTML = `<img src="${res[0].url}" width=100px height=100px>`
+    fotos.innerHTML = `<img src="${res[0].url}" width=300px height=300px>`
 });
 });
