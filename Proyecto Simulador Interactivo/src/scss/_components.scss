@@ -95,6 +95,7 @@
     margin: 1rem;
 }
 
+<<<<<<< HEAD
 //seccion fontos random perros y gatos
 
 .box-api{
@@ -126,6 +127,12 @@
 
 //seccion resultado de la consulta
 
+=======
+
+
+//seccion resultado de la consulta
+
+>>>>>>> f1881ce83a5b0b5f09f0ceed5e385fb841c8bf8f
 .result-container{
     
     height: 10%;
@@ -136,6 +143,7 @@
     border-radius: 2rem;
     margin-left: 10rem;
     margin-right: 10rem;
+<<<<<<< HEAD
     margin-top: 5rem;
     box-shadow: 1rem 1rem 1rem -0.1rem rgba(0,0,0,0.40);
     
@@ -158,9 +166,14 @@
     h3{
         font-size: 2rem;
         padding: 0 0 5rem;
+=======
+    box-shadow: 1rem 1rem 1rem -0.1rem rgba(0,0,0,0.40);
+    
+>>>>>>> f1881ce83a5b0b5f09f0ceed5e385fb841c8bf8f
     }
 
     
+<<<<<<< HEAD
     input{
         border-radius: 1.5rem;
         border: 0.1rem solid black;
@@ -180,6 +193,46 @@
 
 }
 
+=======
+.data-container{
+    width: 45%;
+    height: 50vh;
+    background-color: white;
+    border-radius: 2rem;
+    box-shadow: 1rem 1rem 1rem -0.1rem rgba(0,0,0,0.40);
+    float: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    margin-top: 3rem;
+    margin-left: 10rem;
+    margin-right: 0;
+    h3{
+        font-size: 2rem;
+        padding: 0 0 5rem;
+    }
+
+    input{
+        border-radius: 1.5rem;
+        border: 0.1rem solid black;
+        
+        
+    }
+
+    button{
+        border-radius: 1rem;
+        width: 8rem;
+        height: 3.3rem;
+        border: none;
+        background-color: #0484F4;
+        color: $linkActive;
+        box-shadow: 3px 3px 3px 1px rgba(0,0,0,0.3);
+    }
+
+}
+
+>>>>>>> f1881ce83a5b0b5f09f0ceed5e385fb841c8bf8f
 .pet-container{
     width: 35vw;
     height: 100%;
@@ -240,13 +293,18 @@
     .data-container{
         width: 100vw;
         margin: 0 auto;
+<<<<<<< HEAD
         margin-top: 5rem;
+=======
+        margin-top: 3rem;
+>>>>>>> f1881ce83a5b0b5f09f0ceed5e385fb841c8bf8f
     }
 
     .icon-list{
         display: flex;
     }
 
+<<<<<<< HEAD
     .box-api{
         display: flex;
         width: 100vw;
@@ -254,6 +312,8 @@
         margin-bottom: 5rem;
     }
 
+=======
+>>>>>>> f1881ce83a5b0b5f09f0ceed5e385fb841c8bf8f
 
 }
 
