@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="src/css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" />
     <title>Document</title>
 </head>
 <body class="app-container">
@@ -16,106 +17,94 @@
         </div>
 
         <div class="app-header-center">
-            <div class="search-wrapper">
-                <input type="text" id="" placeholder="Buscar Marca" class="search-input">
-                <img src="src/svg/search.svg" alt="search icon" class="icon-search">
+            <div class="dog-photos">
+                <button id="dp">Fotos de perros</button>
+            </div>
+            <div class="cat-photos">
+                <button id="cp">Fotos de gatos</button>
             </div>
         </div>
         
         <div class="app-header-right">
-            <button class="switch-btn">
-                <img src="src/svg/night-mode.svg" alt="night mode" class="icon-switch" id="nightIcon">
+            <button class="list-btn" id="lista">
+                <img src="src/svg/list.svg" alt="lista" class="icon-list" id="listBtn">
             </button>
+
+            <div class="theme">
+                <div class="toggle-switch-container">
+                  <input type="checkbox" id="switch__input" name="theme" />
+                  <label for="switch__input" id="switch__label">Cambiar</label>
+                </div>
+            </div>
+
             <button class="contact-btn">
-                <img src="src/svg/contact.svg" alt="contacto" class="icon-contact">
+                <img src="src/svg/contact.svg" alt="contacto" class="icon-contact" id="contactBtn">
             </button>
         </div>
     </header>
     <!--seccion principal con el contenido-->
-    <main class="app-content">
+    <main>
+        <div id="photos"></div>
+        <div id="seccionLista"></div>
         <!--seccion resultado de la busqueda-->
-        <div class="result-section">
-            <div class="data-section-header">
-                <p>Resultado de la busqueda</p>
-            <div id="resultado">
-
+            <div class="result-container" id="resultado">
             </div>
+        <!--seccion de ingreso de datos-->
+        <div class="data-container">
+            <div class="data-form">
+                <h3>Ingresa los Datos de tu Mascota</h3>
+                <form action="" class="form-group" method="POST" id="formGroup">
+                    <p>Nombre</p>
+                    <input type="text" name="nombre" class="input-info" id="nombre" required>
+
+                    <p>Tipo de mascota</p>
+                    <input type="radio" name="tipo" value="perro" required>Perro
+                    <input type="radio" name="tipo" value="gato" required>gato
+                            
+                    <p>Edad</p>
+                    <input type="radio" name="edad" value="cachorro" required>Cachorro
+                    <input type="radio" name="edad" value="adulto" required>Adulto
+
+                    <p>Tamaño</p>
+                    <input type="radio" name="tamanio" value="chico" required>Chico
+                    <input type="radio" name="tamanio" value="mediano" required>Mediano
+                    <input type="radio" name="tamanio" value="grande" required>Grande
+
+                    <p>Peso</p>
+                    <input type="number" name="peso" class="input-info" id="kg" required min="1" max="99"> Kg.
+
+                    <p>Marca de Balanceado</p>
+                    <select name="marca">
+                        <option value="seleccionar" disabled="disabled">Seleccionar</option>
+                        <option value="proplan">Pro Plan</option>
+                        <option value="eukanuba">Eukanuba</option>
+                        <option value="vitalcan">Vital Can</option>
+                        <option value="royalcanin">Royal Canin</option>
+                        <option value="excellent">Excellent</option>
+                        <option value="dogchow">Dog Chow</option>
+                        <option value="dogui">Dogui</option>
+                        <option value="gati">Gati</option>
+                        <option value="raza">Raza</option>
+                        <option value="sabrositos">Sabrositos</option>
+                        <option value="pedigree">Pedigree</option>
+                        <option value="whiskas">Whiskas</option>
+                        <option value="otros">Otros</option>
+                    </select>
+
+                    <button type="submit"  class="input-button">Consultar</button>
+                </form>
             </div>
         </div>
-        <!--seccion de ingreso de datos-->
-        <div class="data-section">
-            <div class="data-section-header">
-                <p>Ingresado los Datos de tu Mascota</p>
-            </div>
-            <div class="data-boxes">
-                <div class="data-box-wrapper">
-                    <div class="data-box" style="background-color: #e9e7fd;">
-                        <form action="" class="form-group" method="POST" id="form-group">
-                            <p class="data-content-header">Nombre</p>
-                            <input type="text" name="nombre" class="input-info" id="nombre">
-
-                            <p>Tipo de mascota</p>
-                            <input type="radio" name="tipo" value="perro">Perro
-                            <input type="radio" name="tipo" value="gato">gato
-                            <p>Edad</p>
-                            <input type="radio" name="edad" value="cachorro">Cachorro
-                            <input type="radio" name="edad" value="adulto">Adulto
-
-                            <p>Tamaño</p>
-                            <input type="radio" name="tamanio" value="chico">Chico
-                            <input type="radio" name="tamanio" value="mediano">Mediano
-                            <input type="radio" name="tamanio" value="grande">Grande
-
-                            <p>Peso</p>
-                            <input type="number" name="peso" class="input-info" id="kg"> Kg.
-
-                            <p>Marca de Balanceado</p>
-                            <select name="marca">
-                                <option value="seleccionar">seleccionar</option>
-                                <option value="proplan">Pro Plan</option>
-                                <option value="eukanuba">Eukanuba</option>
-                                <option value="vitalcan">Vital Can</option>
-                                <option value="royalcanin">Royal Canin</option>
-                                <option value="excellent">Excellent</option>
-                                <option value="dogchow">Dog Chow</option>
-                                <option value="dogui">Dogui</option>
-                                <option value="gati">Gati</option>
-                                <option value="raza">Raza</option>
-                                <option value="sabrositos">Sabrositos</option>
-                                <option value="pedigree">Pedigree</option>
-                                <option value="sieger">Sieger</option>
-                                <option value="kongo">Kongo</option>
-                                <option value="whiskas">Whiskas</option>
-                                <option value="seleccionar">Otros</option>
-                            </select>
-
-                            <button type="submit"  class="input-button">Consultar</button>
-                            
-                        </form>
-                    </div>
-                </div>
-            </div>
-
         <!--seccion de mascotas guardadas-->
-        <div class="pet-section">
-            <div class="pet-section-header">
-                <p>Mascotas Guardadas</p>
-            </div>
-                <div class="pet-box">
-                    <div class="pet-content">
-                        <div class="pet-header">
-                            <img src="src/svg/dog.svg" alt="" class="" id="dogIcon">
-                            <p>Nombre</p>
-                        </div>
-                        <div class="pet-data" id="petData">
-                        </div>
-                    </div>
-                </div>
+        <div class="pet-container" id="petData">
+
+        </div>
+
         </div>
     </main>
     <!--footer-->
     <footer></footer>
+    <script src=https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js></script>
     <script src="./src/js/script.js"></script>
 </body>
 </html>
-

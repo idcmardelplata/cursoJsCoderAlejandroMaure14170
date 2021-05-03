@@ -6,3 +6,4 @@ Esos datos pueden ser guardados en localStorage con nombre de mascota a un lado 
 a completar el formulario.
 
 ALEJANDRO MAURE.
+826
